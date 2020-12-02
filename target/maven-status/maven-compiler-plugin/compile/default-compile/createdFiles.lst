@@ -1,0 +1,4 @@
+com/model/JPAUtil.class
+com/controller/UsuarioController.class
+com/model/Usuario.class
+com/dao/UsuarioDAO.class

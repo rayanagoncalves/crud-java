@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<title>Novo Usuário</title>
+</h:head>
+<h:body>
+	<h:form>
+		<p:messages showDetail="true"/>
+		<h:panelGrid columns="2" cellspacing="20" border="1">
+			
+				<f:facet name="header">
+					<h:outputText value="Novo Usuário"></h:outputText>
+				</f:facet>
+				
+				<h:outputText value="Nome"></h:outputText>
+				<h:inputText required="true" requiredMessage="O campo NOME deve ser preenchido." value="#{usuario.nome}"></h:inputText>
+				
+				<h:outputText value="Email"></h:outputText>
+				<h:inputText required="true" requiredMessage="O campo EMAIL deve ser preenchido." value="#{usuario.email}"></h:inputText>
+				
+				<h:outputText value="Senha"></h:outputText>
+				<h:inputText required="true" requiredMessage="O campo SENHA deve ser preenchido." value="#{usuario.senha}"></h:inputText>
+				
+				<h:outputText value="DDD"></h:outputText>
+				<h:inputText value="#{usuario.ddd}"></h:inputText>
+				
+				<h:outputText value="Telefone"></h:outputText>
+				<h:inputText value="#{usuario.numero}"></h:inputText>
+				
+				<h:outputText value="Tipo"></h:outputText>
+				<h:inputText value="#{usuario.tipo}"></h:inputText>
+				
+				<f:facet name="footer">
+					<h:commandButton action="#{usuarioController.salvarUsuario(usuario)}" value="Salvar"></h:commandButton>
+				</f:facet>
+				
+			</h:panelGrid>		
+	</h:form>
+</h:body>
+</html>
